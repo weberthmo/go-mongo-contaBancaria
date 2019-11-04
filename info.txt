@@ -1,0 +1,49 @@
+Baixando dependencias:
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb> go get -u go.mongodb.org/mongo-driver/bson
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb> go get -u go.mongodb.org/mongo-driver/bson/primitive
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb> go get -u go.mongodb.org/mongo-driver/mongo
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb> go get -u go.mongodb.org/mongo-driver/mongo/options
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb> go get -u github.com/gorilla/mux
+	
+
+Realizar o Build
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb\src> go build .\main.go
+	
+Executando a api-mongodb
+	PS C:\Users\weberth\Documents\Go\src\go-rest-api-mongodb\src> go run .\main.go
+
+
+
+=======================================================
+Info banco de dados
+	MongoDB	
+	localhost:27017
+	BD: banco
+	Coleção: conta
+
+db.conta.insert(	
+{
+    numero: "1'",
+    saldo: "200",
+    dataAbertura: new Date (2019, 11, 01),
+    Status: "1",
+}
+)
+	
+	
+Comandos MongoDB
+
+Novo terminal
+	mongo
+
+Listar Bds
+	> show dbs
+	
+Usar determinado Bds
+	> use <BD>    
+	
+Listar Coleções
+	> show collections
+	
+Listar registro de coleções
+	db.<colecao>.find().pretty()
